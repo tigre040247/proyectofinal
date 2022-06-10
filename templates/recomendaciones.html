@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid</title>
+    <!--Librerias de CSS y Javascript  de Boosttraps -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+
+    <!-- Favicons -->
+    <link rel="icon" href="{{ url_for('static', filename='../static/LogoCovid.PNG') }}">
+
+    <style>
+        #img_recomendacion{
+            width: 1350px;
+            height: 800px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">COVID</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./informacion">Informacion</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Noticias
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./salud">Salud</a></li>
+                            <li><a class="dropdown-item" href="./recomendaciones">Recomendaciones</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="./vacunas">Vacunas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contacto">Contacto</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- Es un conjunto donde se muestran varias imagenes que avanzan de manera sucesiva -->
+    <div>
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../static/1.PNG" alt="" class="d-block w-100" width="300px" height="500px">
+                </div>
+                <div class="carousel-item">
+                    <img src="../static/2.jpg" class="d-block w-100" alt="..." width="300px" height="500px">
+                </div>
+                <div class="carousel-item">
+                    <img src="../static/3.png" class="d-block w-100" alt="..." width="300px" height="500px">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div><br>
+
+    <!--informacion del covid 19  -->
+    <div>
+        <h1 class="text-center text-info fw-bold"> Para evitar la propagación de la COVID‑19, sigue estas
+            recomendaciones:</h1>
+            <img id="img_recomendacion" src="/static/Prevencion.png" alt="">
+        <div class="row" style="width: 80rem; margin: 0 auto;">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Recomendacion 1:</h5>
+                        <p class="card-text">
+                            Mantén una distancia de seguridad con otras personas (de 1 metro como mínimo), aunque no
+                            parezca que estén enfermas.
+                            <br> Utiliza mascarilla en público, especialmente en interiores o cuando no sea posible
+                            mantener el distanciamiento físico.
+                            <br> Prioriza los espacios abiertos y con buena ventilación en lugar de los espacios
+                            cerrados. Si estás en interiores, abre una ventana.
+                            <br> Lávate las manos con frecuencia. Usa agua y jabón o un desinfectante de manos a base de
+                            alcohol.
+                            <br> Vacúnate cuando sea tu turno. Sigue las directrices sobre vacunación de las autoridades
+                            locales.
+                            <br> Cuando tosas o estornudes, cúbrete la nariz y la boca con el codo flexionado o con un
+                            pañuelo.
+                            <br> Si no te encuentras bien, quédate en casa.
+
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Recomendacion 2</h5>
+                        <p class="card-text">
+                            Mascarillas
+                            <br> <br> Las mascarillas bien colocadas pueden ayudar a prevenir que las personas que las
+                            llevan contagien el virus a otras. Sin embargo, no protegen frente a la COVID‑19 por sí
+                            solas, sino que deben combinarse con el distanciamiento físico y la higiene de manos. Sigue
+                            las recomendaciones de las autoridades sanitarias locales.
+                            <br>
+                            <br> <br>
+                            En caso de que tengas fiebre, tos o dificultad para respirar, busca atención médica. Llama
+                            por teléfono antes de acudir a tu proveedor de servicios sanitarios para que te dirijan al
+                            centro médico adecuado. De esta forma, te protegerás a ti y evitarás la propagación de virus
+                            y otras infecciones.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-light text-center text-lg-start">
+        <!-- Grid container -->
+        <div class="container p-4">
+
+
+            <!-- Section: Form -->
+            <section class="">
+                <form action="">
+                    <!--Grid row-->
+                    <div class="row d-flex justify-content-center">
+                        <!--Grid column-->
+                        <div class="col-auto">
+                            <p class="pt-2">
+                                <strong>Subscribete </strong>
+                            </p>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-md-5 col-12">
+                            <!-- Email input -->
+                            <div class="form-outline form-white mb-4">
+                                <input type="email" id="form5Example21" class="form-control" />
+                                <label class="form-label" for="form5Example21">Email address</label>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-auto">
+                            <!-- Submit button -->
+                            <button type="submit" class="btn btn-outline-dark mb-4">
+                                Subscribe
+                            </button>
+                        </div>
+                        <!--Grid column-->
+                    </div>
+                    <!--Grid row-->
+                </form>
+            </section>
+            <!-- Section: Form -->
+
+            <!-- Section: Text -->
+            <section class="mb-4">
+                <p>
+                    Mantengase informado a traves de nuestras redes sociales, paginas, entre otros acerca del
+                    covid 19, para prevenir y salvar mas vida.
+                </p>
+            </section>
+            <!-- Section: Text -->
+
+            <!--Grid row-->
+            <div class="row">
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Sintomas Covid</h5>
+
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="#!" class="text-dark">Fiebre</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-dark">Tos</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-dark">Dolor de Cabeza</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-dark">Entre otros</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Vacunas</h5>
+
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="#!" class="text-dark">1 Dosis</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-dark">2 Dosis</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-dark">3 Dosis</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-dark">4 Dosis</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Links</h5>
+
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="#!" class="text-dark">Enlaces</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-dark">Recomendaciones</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-dark">registros</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-dark">informacion</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Propiedades</h5>
+
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="#!" class="text-dark">Principal</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-dark">Vacunas</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-dark">Help</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-dark">Covid 19</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+            </section>
+            <!-- Section: Links -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(7, 131, 233, 0.068);">
+            © 2022 Covid - 19
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+
+</body>
+
+</html>
